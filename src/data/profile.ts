@@ -6,7 +6,7 @@ export const profile = {
   
   // Hero section text (homepage)
   hero: {
-    tagline: "Software Engineer with a builder's heart. I love turning ideas into products and shipping things that help people. Currently architecting cloud and AI systems as a Solutions Architect Intern at AWS.",
+    tagline: "Software Engineer with a builder's heart. I love turning ideas into products and shipping things that help people.",
     about: "I'm a full-stack software engineer who loves learning new technologies, building end-to-end products, and turning complex problems into simple, reliable systems. My work spans C#, JavaScript, React, and AWS—blending front-end craft with back-end reliability. Along the way, I've shipped production systems for 30K+ users, earned four AWS certifications, and competed in hackathons.",
   },
 

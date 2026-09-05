@@ -46,10 +46,15 @@ const ContactSection = () => {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
       });
+      const result = await response.json();
 
-      if (response.ok) {
+      if (response.ok && result.success) {
         setFormStatus("success");
         form.reset();
         setTimeout(() => setFormStatus("idle"), 5000);
@@ -120,7 +125,7 @@ const ContactSection = () => {
         {/* Form */}
         <FadeIn delay={0.2}>
           <form onSubmit={handleSubmit} className="mt-12 space-y-8">
-            <input type="hidden" name="access_key" value="be6a7e47-d3ad-41f6-9307-092cea4d05f9" />
+            <input type="hidden" name="access_key" value="32bc9e07-2e0d-4860-a0b8-d86d3a9a3c92" />
             <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
 
             <div className="grid gap-8 md:grid-cols-2">
